@@ -14,14 +14,14 @@ const projectData = [
     description:
     "A Chromium-based browser with a built-in tiling window manager, designed for keyboard-driven navigation and multitasking. Inspired by OS-based tiling managers like i3wm and qtile, it enables users to efficiently organize and manage multiple web pages in a spatial, customizable workspace.",
     link: "https://github.com/aturtle4/TyleBrowser",
-    image: "src/assets/Tylelogo.png",
+    image: "https://github.com/user-attachments/assets/03ef5885-6301-4af8-8b1a-82ffaf467290",
     },
   {
     title: "LeapCode",
     description:
       "Block-based programming platform bridging creative exploration and structured problem-solving. Built features like classrooms, forums, and roadmaps to boost usability and engagement.",
     link: "https://github.com/aturtle4/LeapCode",
-    image: "src/assets/leapcode_dark_logo.png"
+    image: "https://github.com/user-attachments/assets/eb2fd2eb-7f87-48b6-943f-d3028adce702"
   },
   {
     title: "Roamify",
@@ -35,7 +35,7 @@ const projectData = [
     description:
       "Android news app featuring a short-form video based feed with MVVM architecture. Integrated text-to-speech, localization, and adaptive content loading.",
     link: "https://github.com/aturtle4/FlashFeed",
-    image: "src/assets/flashfeed_logo.png",
+    image: "https://github.com/user-attachments/assets/9c557efa-edc4-40dc-8483-9638515b8080",
   },
 ];
 
