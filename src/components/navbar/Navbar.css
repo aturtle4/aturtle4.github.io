@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@400;500&display=swap');
+
+.navbar {
+  padding: clamp(0.5rem, 2vw, 1rem) 0; /* Responsive padding */
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1100;
+}
+
+.navbar-container {
+  max-width: 80%;
+  margin: 0 0 0 clamp(1rem, 2vw, 2rem); /* Responsive margin */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.navbar-logo {
+  height: clamp(30px, 6vw, 60px); /* Responsive logo size */
+  margin-right: clamp(1rem, 2vw, 2rem);
+  position: absolute;
+  top: clamp(0.5rem, 1.5vw, 1rem);
+  left: clamp(0.5rem, 1.5vw, 1rem);
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding-left: clamp(8rem, 20vw, 14rem); /* Responsive padding to avoid logo overlap */
+}
+
+.navbar-links li {
+  margin: 0 clamp(2rem, 4vw, 6rem); /* Responsive link spacing */
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #1F1F1F;
+  font-size: clamp(1rem, 2vw, 2rem); /* Responsive font size */
+  font-weight: 500;
+  font-family: 'Alumni Sans', sans-serif;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.navbar-logo:hover {
+  transform: scale(1.1); /* Grows logo by 10% on hover */
+}
+
+
+.navbar-links a:hover {
+  color: #1F1F1F;
+}
+
+.navbar-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #1F1F1F;
+  transition: width 0.3s ease;
+}
+
+.navbar-links a:hover::after {
+  width: 100%;
+}
+
+/* Medium screens (tablets, up to 768px) */
+@media (max-width: 768px) {
+  .navbar-container {
+    max-width: 90%; /* Wider container for tablets */
+    margin: 0 0 0 1.5rem;
+  }
+
+  .navbar-logo {
+    height: 35px;
+    top: 0.8rem;
+    left: 0.8rem;
+  }
+
+  .navbar-links {
+    padding-left: 8rem; /* Reduced to fit smaller screens */
+  }
+
+  .navbar-links li {
+    margin: 0 2rem; /* Tighter spacing */
+  }
+
+  .navbar-links a {
+    font-size: 1.2rem;
+  }
+}
+
+/* Small screens (mobile, up to 480px) */
+@media (max-width: 480px) {
+  .navbar-container {
+    max-width: 95%; /* Maximize width for mobile */
+    margin: 0 0 0 1rem;
+  }
+
+  .navbar-logo {
+    height: 30px;
+    top: 0.5rem;
+    left: 0.5rem;
+  }
+
+  .navbar-links {
+    padding-left: 5rem; /* Further reduced */
+    flex-wrap: wrap; /* Allow links to wrap if needed */
+  }
+
+  .navbar-links li {
+    margin: 0 1rem; /* Minimal spacing */
+  }
+
+  .navbar-links a {
+    font-size: 1rem;
+  }
+}

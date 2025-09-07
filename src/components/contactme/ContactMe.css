@@ -1,0 +1,123 @@
+.contact-split {
+  min-height: 100vh;
+  display: flex;
+  font-family: 'Alumni Sans', sans-serif;
+  background-color: #fbfbfb;
+  color: #1f1f1f;
+  padding: 4rem 8%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Bottom-left circle */
+.contact-split::before {
+  content: "";
+  position: absolute;
+  bottom: -150px; /* partially offscreen */
+  left: -200px; /* partially offscreen */
+  width: 1000px;
+  height: 1000px;
+  background-color: #d7ac1f;
+  border-radius: 50%;
+  z-index: 0;
+  opacity: 0.9;
+}
+
+/* Left side */
+.contact-split-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.contact-split-left h1 {
+  font-size: 12rem;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 0.05em;
+}
+
+.contact-split-left h1 .line1,
+.contact-split-left h1 .line2 {
+  display: block;
+}
+
+.contact-split-left h1 .line2 {
+  margin-top: 1rem;
+  font-size: 11rem;
+}
+
+/* Right side */
+.contact-split-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 6rem;
+  gap: 2.5rem;
+  z-index: 1;
+  position: relative;
+}
+
+.contact-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.contact-title {
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
+.contact-link {
+  font-size: 2rem;
+  color: #1f1f1f;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-link:hover {
+  color: #d7ac1f;
+  transform: translateX(5px);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .contact-split {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 3rem 6%;
+  }
+
+  .contact-split-left {
+    justify-content: flex-start;
+    margin-bottom: 2rem;
+  }
+
+  .contact-split-left h1 {
+    font-size: 7rem;
+  }
+
+  .contact-split-left h1 .line2 {
+    font-size: 6rem;
+  }
+
+  .contact-split-right {
+    padding-left: 0;
+    gap: 2rem;
+  }
+
+  .contact-title {
+    font-size: 2rem;
+  }
+
+  .contact-link {
+    font-size: 1.6rem;
+  }
+}

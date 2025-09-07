@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@400;900&display=swap');
+
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.hero-circle {
+  position: absolute;
+  top: -10%;
+  right: -14%;
+  width: 60vw; /* Relative to viewport width */
+  height: 60vw;
+  max-width: 900px; /* Matches your specified size */
+  max-height: 900px;
+  background-color: #D7AC1F;
+  border-radius: 50%;
+  z-index: 1000;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1000;
+  text-align: left;
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero-greeting {
+  font-family: 'Alumni Sans', sans-serif;
+  font-size: clamp(1.5rem, 2.5vw, 3rem); /* Scales between 1.5rem and 3rem */
+  font-weight: 400;
+  line-height: 1;
+  color: #1F1F1F;
+  margin: 0 0 clamp(1rem, 2vw, 0.5rem) 0; /* Scales margin-bottom */
+}
+
+.hero-name {
+  font-family: 'Alumni Sans', sans-serif;
+  font-size: clamp(5rem, 20vw, 25rem); /* Scales between 5rem and 25rem */
+  font-weight: 900;
+  color: #1F1F1F;
+  line-height: 1;
+  margin: 0 clamp(0.5rem, 1vw, 1rem) 0 0;
+}
+
+.hero-roles {
+  position: absolute;
+  left: 100%;
+  top: 65%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-roles p {
+  font-family: 'Alumni Sans', sans-serif;
+  font-size: clamp(1.5rem, 2.5vw, 3rem);
+  font-weight: 400;
+  color: #1F1F1F;
+  line-height: 1;
+  margin: 0.2rem 0;
+}
+
+/* Medium screens (tablets, up to 768px) */
+@media (max-width: 768px) {
+  .hero-circle {
+    width: 60vw;
+    height: 60vw;
+    max-width: 600px;
+    max-height: 600px;
+    top: -10%;
+    right: -15%;
+  }
+
+  .hero-text {
+    margin-bottom: 1.5rem;
+    margin-left: 1.5rem;
+  }
+
+  .hero-roles {
+    top: 70%; /* Adjusts vertical alignment for smaller screens */
+  }
+}
+
+/* Small screens (mobile, up to 480px) */
+@media (max-width: 480px) {
+  .hero-circle {
+    width: 60vw;
+    height: 60vw;
+    max-width: 400px;
+    max-height: 400px;
+    top: -12%;
+    right: -18%;
+  }
+
+  .hero-text {
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+  }
+
+  .hero-roles {
+    left: 90%; /* Slightly closer to "Armaan" to fit smaller screens */
+    top: 75%;
+  }
+}
